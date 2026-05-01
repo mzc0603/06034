@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>谐音取名 - 免费中文名字谐音网名生成器</title>
+    <meta name="description" content="免费在线中文名字谐音网名生成器，输入姓名即可生成古风、可爱、高冷、情侣等风格网名昵称。一键复制，支持随机生成，适合游戏ID、社交账号取名。">
+    <meta name="keywords" content="谐音取名,网名生成器,昵称生成,游戏ID,古风网名,可爱网名,情侣网名,高冷网名,名字谐音,中文网名">
+    <meta name="author" content="谐音取名网">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourusername.github.io/xieyin-names/">
+    <meta property="og:title" content="谐音取名 - 免费中文名字谐音网名生成器">
+    <meta property="og:description" content="输入姓名，智能生成古风、可爱、高冷、情侣等风格网名，一键复制，永久免费。">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <span class="logo-icon">谐</span>
+                    <span class="logo-text">谐音取名</span>
+                </a>
+                <button class="theme-toggle" id="themeToggle" aria-label="切换深浅色模式">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <h1 class="hero-title">谐音取名</h1>
+                <p class="hero-subtitle">输入姓名，智能生成专属网名</p>
+            </section>
+
+            <section class="input-section" aria-label="名字输入">
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="nameInput"
+                        class="name-input"
+                        placeholder="输入你的名字，如：李白"
+                        maxlength="6"
+                        autocomplete="off"
+                        aria-describedby="nameHint"
+                    >
+                    <span class="char-count" id="charCount">0/6</span>
+                </div>
+                <p id="nameHint" class="visually-hidden">请输入2-6个中文字符的姓名</p>
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="randomBtn" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        随机姓名
+                    </button>
+                    <button class="btn btn-primary" id="generateBtn" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                        生成网名
+                    </button>
+                </div>
+            </section>
+
+            <nav class="category-nav" aria-label="网名分类">
+                <div class="category-tabs" role="tablist">
+                    <button class="category-tab active" role="tab" data-category="gufeng" aria-selected="true">古风</button>
+                    <button class="category-tab" role="tab" data-category="keai" aria-selected="false">可爱</button>
+                    <button class="category-tab" role="tab" data-category="gaoling" aria-selected="false">高冷</button>
+                    <button class="category-tab" role="tab" data-category="qinglv" aria-selected="false">情侣</button>
+                </div>
+            </nav>
+
+            <section class="results-section" aria-label="生成结果">
+                <div class="results-header">
+                    <h2 class="results-title">为你生成的网名</h2>
+                    <p class="results-tip">点击卡片即可复制</p>
+                </div>
+                <div class="results-grid" id="resultsGrid">
+                    <div class="result-placeholder">
+                        <p>输入姓名后点击生成</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>谐音取名 · 让名字更有趣</p>
+            <p class="footer-tips">使用说明：输入中文姓名，选择喜欢的风格，点击生成即可获得专属网名</p>
+        </footer>
+
+        <div class="toast" id="toast" role="alert" aria-live="polite">
+            <span class="toast-text">已复制到剪贴板</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
